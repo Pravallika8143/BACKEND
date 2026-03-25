@@ -1,0 +1,16 @@
+const express = require("express");
+const dotenv = require("dotenv");
+const connectDB = require("./config/db");
+const cors = require("cors");
+const todo = require("./todolist/todoRoutes")
+dotenv.config();
+connectDB();
+const app = express();
+app.use(express.json());
+app.use(cors());
+
+app.use("/todos",todo);
+
+app.listen(4600,()=>{
+    console.log("Server Running on 4600")
+})
