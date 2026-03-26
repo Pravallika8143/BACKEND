@@ -9,14 +9,13 @@ exports.getTodos = async (req, res) => {
   }
 };
 
-// @desc Get single lead by ID
 // exports.getTodoById = async (req, res) => {
 //   try {
 //     const todo = await Todo.findById(req.params.id);
-//     if (!todo) return res.status(404).json({ message: "Todo not found" });
+//     if (!todo) return res.json({ message: "Todo not found" });
 //     res.json(todo);
 //   } catch (err) {
-//     res.status(500).json({ message: err.message });
+//     res.json({ message: err.message });
 //   }
 // };
 
