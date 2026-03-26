@@ -31,9 +31,7 @@ exports.addTodo = async (req, res) => {
 
 exports.updateTodo = async (req, res) => {
   try {
-    const updatedTodo = await Todo.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-    });
+    const updatedTodo = await Todo.findByIdAndUpdate(req.params.id, req.body, {new: true});
     if (!updatedTodo)
       return res.json({ message: "Todo not found" });
     res.json(updatedTodo);
