@@ -9,16 +9,6 @@ exports.getTodos = async (req, res) => {
   }
 };
 
-// exports.getTodoById = async (req, res) => {
-//   try {
-//     const todo = await Todo.findById(req.params.id);
-//     if (!todo) return res.json({ message: "Todo not found" });
-//     res.json(todo);
-//   } catch (err) {
-//     res.json({ message: err.message });
-//   }
-// };
-
 exports.addTodo = async (req, res) => {
   try {
     const newTodo = new Todo(req.body);
